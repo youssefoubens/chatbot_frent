@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.chatbot.controllers.ChatbotController" stylesheets="@styles.css">
+
+    <!-- Header Section -->
+    <top>
+        <VBox fx:id="header" styleClass="header" BorderPane.alignment="CENTER">
+            <Label text="ENSET Mohammedia Chatbot" style="-fx-font-size: 24px; -fx-text-fill: white;" />
+        </VBox>
+    </top>
+
+    <!-- Chat Section -->
+    <center>
+        <VBox fx:id="chatSection" styleClass="chat-section" BorderPane.alignment="CENTER">
+            <ScrollPane fx:id="scrollPane" fitToWidth="true" VBox.vgrow="ALWAYS">
+                <VBox fx:id="messagesContainer" spacing="10" style="-fx-padding: 10;" VBox.vgrow="ALWAYS" />
+            </ScrollPane>
+            <HBox fx:id="inputContainer" styleClass="input-container" spacing="10" VBox.vgrow="NEVER">
+                <HBox fx:id="contextContainer" spacing="10">
+                    <ComboBox fx:id="contextComboBox" styleClass="context-combo" promptText="Select Context" />
+                    <TextField fx:id="customContextField" styleClass="input-field" promptText="Enter custom context" />
+                </HBox>
+                <TextField fx:id="messageField"  onKeyPressed="#handleKeyPressed" styleClass="input-field" HBox.hgrow="ALWAYS" promptText="Type your message..." />
+                <Button text="Send" styleClass="send-button" onAction="#sendMessage" />
+            </HBox>
+        </VBox>
+    </center>
+
+    <!-- Left Sidebar -->
+    <left>
+        <VBox fx:id="sidebar" style="-fx-background-color: #444444; -fx-padding: 10;" spacing="10" prefWidth="200" minWidth="150" maxWidth="300">
+            <Button text="New Chat" styleClass="send-button" onAction="#createNewChat" />
+            <ScrollPane VBox.vgrow="ALWAYS" fitToWidth="true">
+                <VBox fx:id="chatTitlesContainer" spacing="5" />
+            </ScrollPane>
+            <Button text="Logout" styleClass="sidebar-button" onAction="#logout" />
+        </VBox>
+    </left>
+</BorderPane>

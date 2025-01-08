@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<BorderPane xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.chatbot.controllers.AdminController" stylesheets="@admin.css">
+
+    <!-- Header Section -->
+    <top>
+        <VBox fx:id="header" styleClass="header" BorderPane.alignment="CENTER">
+            <Label text="Admin Dashboard" style="-fx-font-size: 28px; -fx-text-fill: white;" />
+        </VBox>
+    </top>
+
+    <!-- Main Content Section -->
+    <center>
+        <VBox fx:id="mainContent" styleClass="main-content" spacing="20" BorderPane.alignment="CENTER">
+            <!-- File List Section -->
+            <VBox styleClass="section">
+                <Label text="Uploaded Files" styleClass="section-title" />
+                <TableView fx:id="fileTable" styleClass="file-table">
+                    <columns>
+                        <TableColumn fx:id="fileNameColumn" text="File Name" styleClass="table-column" />
+                        <TableColumn fx:id="categoryColumn" text="Category" styleClass="table-column" />
+                    </columns>
+                </TableView>
+            </VBox>
+
+            <!-- Upload Section -->
+            <VBox styleClass="section">
+                <Label text="Upload New Document" styleClass="section-title" />
+                <HBox spacing="10">
+                    <TextField fx:id="titleField" promptText="Title" styleClass="input-field" />
+                    <TextField fx:id="programField" promptText="Program" styleClass="input-field" />
+                    <!-- Context ComboBox -->
+                    <ComboBox fx:id="contextComboBox" promptText="Select Context" styleClass="input-field" />
+
+                    <ComboBox fx:id="categoryComboBox" promptText="Category" styleClass="input-field" />
+                    <Button text="Browse" styleClass="action-button" onAction="#chooseFile" />
+                </HBox>
+                <Button text="Upload" styleClass="action-button" onAction="#uploadDocument" />
+            </VBox>
+        </VBox>
+    </center>
+
+    <!-- Sidebar Section -->
+    <left>
+        <VBox fx:id="sidebar" styleClass="sidebar" spacing="20" prefWidth="200" minWidth="200" maxWidth="200">
+            <Button text="Refresh Files" styleClass="sidebar-button" onAction="#listFiles" />
+            <Button text="Delete Selected" styleClass="sidebar-button" onAction="#deleteFile" />
+            <TextField fx:id="searchField" promptText="Search files..." onKeyReleased="#filterFiles" />
+            <Button text="Logout" styleClass="sidebar-button" onAction="#logout" />
+        </VBox>
+    </left>
+</BorderPane>

@@ -1,0 +1,161 @@
+.root {
+    -fx-background-color: #f5f5f5; /* Light gray background for a clean, professional look */
+}
+
+.header {
+    -fx-background-color: #2c3e50; /* Dark blue for a sophisticated header */
+    -fx-padding: 20;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 5); /* Subtle shadow for depth */
+}
+
+.header Label {
+    -fx-text-fill: white;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI", sans-serif; /* Professional font */
+}
+
+.chat-section {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #f0f0f0); /* Gradient background */
+    -fx-border-radius: 10;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 5); /* Outer shadow for depth */
+}
+
+/* User message style */
+.user-message {
+    -fx-background-color: #0078D7; /* Blue background */
+    -fx-text-fill: white; /* White text color */
+    -fx-padding: 10;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-alignment: BASELINE_RIGHT; /* Align text to the right */
+}
+
+/* Bot message style */
+.bot-message {
+    -fx-background-color: #F1F1F1; /* Light gray background */
+    -fx-text-fill: black; /* Black text color */
+    -fx-padding: 10;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-alignment: BASELINE_LEFT; /* Align text to the left */
+}
+
+/* Error message style */
+.error-message {
+    -fx-background-color: #FFBABA; /* Light red background */
+    -fx-text-fill: black; /* Black text color */
+    -fx-padding: 10;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-font-style: italic; /* Italic text for error messages */
+}
+
+.error-message {
+    -fx-background-color: #e74c3c; /* Red for error messages */
+    -fx-text-fill: white;
+    -fx-padding: 10;
+    -fx-border-radius: 10;
+    -fx-alignment: center;
+    -fx-max-width: 300px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 3); /* Shadow for messages */
+}
+
+.input-container {
+    -fx-background-color: #ecf0f1; /* Light gray for the input area */
+    -fx-padding: 5;
+    -fx-border-radius: 15;
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 5); /* Inner shadow for depth */
+    -fx-spacing: 10; /* Space between children */
+    -fx-alignment: center; /* Center alignment for children */
+}
+
+.input-field {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-padding: 10;
+    -fx-border-radius: 5;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 3); /* Shadow for input field */
+    -fx-wrap-text: true; /* Enable text wrapping */
+    -fx-pref-height: 40; /* Initial height */
+    -fx-max-height: 120; /* Maximum height before scrolling */
+    -fx-min-height: 40; /* Minimum height */
+    -fx-pref-width: 100%; /* Take up available width */
+}
+
+.send-button {
+    -fx-background-color: #2980b9; /* Darker blue for the send button */
+    -fx-text-fill: white;
+    -fx-padding: 10 20;
+    -fx-border-radius: 5;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 3); /* Shadow for button */
+    -fx-min-width: 120; /* Fixed width for the button */
+    -fx-max-width: 120; /* Fixed width for the button */
+}
+
+.send-button:hover {
+    -fx-background-color: #1c5980; /* Even darker blue on hover */
+}
+
+.chat-title {
+    -fx-background-color: #34495e; /* Dark blue for chat titles */
+    -fx-text-fill: white;
+    -fx-padding: 10;
+    -fx-border-radius: 5;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 3); /* Shadow for chat titles */
+}
+
+.chat-title:hover {
+    -fx-background-color: #2c3e50; /* Darker blue on hover */
+}
+
+.sidebar {
+    -fx-background-color: #2c3e50; /* Dark blue for the sidebar */
+    -fx-padding: 15;
+    -fx-border-radius: 10;
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 5); /* Inner shadow for depth */
+    -fx-pref-width: 300px; /* Fixed width for the sidebar */
+    -fx-min-width: 300px; /* Fixed width for the sidebar */
+    -fx-max-width: 300px; /* Fixed width for the sidebar */
+}
+
+.context-combo {
+    -fx-background-color: #34495e; /* Dark blue for the combo box */
+    -fx-text-fill: white;
+    -fx-padding: 5;
+    -fx-border-radius: 5;
+    -fx-font-size: 14px;
+}
+
+.context-combo .list-cell {
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+}
+
+.context-combo .list-view {
+    -fx-background-color: #34495e;
+}
+
+.context-combo .arrow-button {
+    -fx-background-color: #2c3e50;
+}
+
+.context-combo .arrow {
+    -fx-background-color: white;
+}
+
+.custom-context-field {
+    -fx-background-color: #34495e; /* Dark blue for custom context field */
+    -fx-text-fill: white;
+    -fx-padding: 5;
+    -fx-border-radius: 5;
+    -fx-font-size: 14px;
+}

@@ -1,0 +1,52 @@
+/* Main Container */
+.main-container {
+    -fx-background-color: #f0f4f8;
+    -fx-max-width: 300;
+    -fx-min-width: 50;
+    -fx-background-radius: 20px;
+}
+
+/* Title */
+.title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+/* Input Fields */
+.input-field {
+    -fx-pref-width: 300px;
+    -fx-pref-height: 40px;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1px;
+    -fx-padding: 5px 10px;
+}
+
+.input-field:focused {
+    -fx-border-color: #3498db;
+}
+
+/* Primary Button */
+.btn-primary {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 300px;
+    -fx-pref-height: 40px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.btn-primary:hover {
+    -fx-background-color: #2980b9;
+}
+
+/* Footer */
+.footer {
+    -fx-font-size: 12px;
+    -fx-text-fill: #7f8c8d;
+}

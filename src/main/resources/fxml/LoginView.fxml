@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.chatbot.controllers.LoginController"
+      alignment="CENTER" spacing="20" stylesheets="@bootstrap.css" >
+    <!-- Logo Image -->
+    <VBox fx:id="mainContainer" spacing="20" alignment="CENTER" styleClass="main-container">
+        <!-- Logo -->
+        <ImageView fx:id="logoImage" fitWidth="150" fitHeight="150" preserveRatio="true" />
+
+        <!-- Title -->
+        <Label text="Welcome to ChatBot" styleClass="title" />
+
+        <!-- Input Fields -->
+        <VBox spacing="10" alignment="CENTER">
+            <TextField fx:id="usernameField" promptText="Username" styleClass="input-field" />
+            <PasswordField fx:id="passwordField" promptText="Password" styleClass="input-field" />
+        </VBox>
+
+        <!-- Buttons -->
+        <HBox spacing="15" alignment="CENTER">
+            <Button text="Login" onAction="#handleLogin" styleClass="btn-primary" />
+            <Button text="Sign Up" onAction="#handleSignUp" styleClass="btn-secondary" />
+        </HBox>
+
+        <!-- Footer -->
+        <Label text="© 2025 ChatBot Inc." styleClass="footer" />
+    </VBox>
+</VBox>

@@ -1,0 +1,98 @@
+/* Root and General Styles */
+.root {
+    -fx-background-color: #f5f5f5; /* Light gray background */
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* Header Section */
+.header {
+    -fx-background-color: #2c3e50; /* Dark blue header */
+    -fx-padding: 20;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 5); /* Subtle shadow */
+}
+
+.header Label {
+    -fx-text-fill: white;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+
+/* Main Content Section */
+.main-content {
+    -fx-padding: 20;
+}
+
+.section {
+    -fx-background-color: white;
+    -fx-border-radius: 10;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 5); /* Subtle shadow */
+}
+
+.section-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50; /* Dark blue text */
+    -fx-padding: 0 0 10 0; /* Bottom padding */
+}
+
+/* Input Fields */
+.input-field {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-padding: 10;
+    -fx-border-radius: 5;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 3); /* Subtle shadow */
+}
+
+/* Buttons */
+.action-button {
+    -fx-background-color: #2980b9; /* Dark blue button */
+    -fx-text-fill: white;
+    -fx-padding: 10 20;
+    -fx-border-radius: 5;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 3); /* Shadow */
+}
+
+.action-button:hover {
+    -fx-background-color: #1c5980; /* Darker blue on hover */
+}
+
+/* Table View */
+.file-table {
+    -fx-background-color: white;
+    -fx-border-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 5); /* Subtle shadow */
+}
+
+.table-column {
+    -fx-font-size: 14px;
+    -fx-text-fill: #2c3e50; /* Dark blue text */
+    -fx-alignment: center-left;
+}
+
+/* Sidebar Section */
+.sidebar {
+    -fx-background-color: #34495e; /* Dark blue sidebar */
+    -fx-padding: 15;
+    -fx-border-radius: 10;
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 5); /* Inner shadow */
+}
+
+.sidebar-button {
+    -fx-background-color: #2980b9; /* Dark blue button */
+    -fx-text-fill: white;
+    -fx-padding: 10;
+    -fx-border-radius: 5;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 3); /* Shadow */
+}
+
+.sidebar-button:hover {
+    -fx-background-color: #1c5980; /* Darker blue on hover */
+}
